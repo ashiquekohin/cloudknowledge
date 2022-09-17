@@ -8,5 +8,5 @@ WORKDIR /var/www/html
 RUN unzip milina.zip
 RUN cp -rvf milina/* .
 RUN rm -rf milina  milina.zip
-CMD ["/user/sbin/httpd", "-D", "FOREGROUND"]
+CMD ["/user/bin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
