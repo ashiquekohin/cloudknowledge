@@ -5,5 +5,6 @@ unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page283/milina.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip milina.zip
-CMD ["/user/bin/httpd", "-D", "FOREGROUND"]
+RUN cp -rvf milina/* .
+CMD ["apache2",  "-DFOREGROUND"]
 EXPOSE 80
