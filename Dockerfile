@@ -6,5 +6,5 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page283/mi
 WORKDIR /var/www/html
 RUN unzip milina.zip
 RUN cp -rvf milina/* .
-CMD ["apache2",  "-DFOREGROUND"]
+CMD ["/user/sbin/httpd",  "-DFOREGROUND"]
 EXPOSE 80
