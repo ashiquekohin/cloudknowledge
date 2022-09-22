@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM centos:latest
 RUN yum install -y httpd \
 zip \
 unzip
@@ -7,5 +7,5 @@ WORKDIR /var/www/html
 RUN unzip milina.zip
 RUN cp -rvf milina/* .
 RUN rm -rf milina  milina.zip
-CMD ["/user/bin/httpd", "-D",  "FOREGROUND"]
+CMD ["/user/bin/httpd", "-DFOREGROUND"]
 EXPOSE 80
